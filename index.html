@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>🔒 Aside アーティファクト</title><style>
+:root{color-scheme:light dark;--bg:#fff;--fg:#111;--mut:#666;--line:#ddd;--acc:#111;--accfg:#fff}
+@media(prefers-color-scheme:dark){:root{--bg:#111214;--fg:#eee;--mut:#999;--line:#333;--acc:#eee;--accfg:#111}}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;padding:20px}
+form{width:100%;max-width:360px}h1{font-size:20px;margin:0 0 4px}p{color:var(--mut);font-size:13px;margin:0 0 20px}
+.u{position:absolute;left:-9999px;width:1px;height:1px}
+input[type=password]{width:100%;font-size:16px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:transparent;color:inherit}
+label{display:flex;gap:8px;align-items:center;font-size:14px;margin:14px 0;min-height:40px}label input{width:20px;height:20px}
+button{width:100%;font-size:16px;font-weight:700;padding:13px;border:0;border-radius:10px;background:var(--acc);color:var(--accfg)}
+#e{color:#e5484d;font-size:13px;min-height:20px;margin-top:10px}
+</style></head><body><form id="f" hidden><h1>🔒 Aside アーティファクト</h1><p>パスワードで保護されています</p>
+<input class="u" type="text" name="username" autocomplete="username" value="aside-artifacts" tabindex="-1" aria-hidden="true">
+<input id="p" type="password" name="password" autocomplete="current-password" placeholder="パスワード" required>
+<label><input id="r" type="checkbox" checked>この端末で記憶する</label><button id="b">開く</button><div id="e"></div></form>
+<script>
+const D={salt:"vfExf+Dzxifjyk3kVcyxyA==",iv:"I04JTVlc+AYuzO8l",ct:"Up3SycU9l/y8ebg3K2WSm1979mnDV2x3FmmiJGGxGKDAW20l2X2w6fwipu0BWQ/BqWkXIkrr+uZxqP7a9bEaN2k+1eTp3gIJ2FKp/W+1uo2nVFwEJzZxnJL0vuKyHrqAwbXMPtgxCuRn/XnQvBc3Y0+CBU+ww7AEiCK6hQLIGLuBqgkfzmmY4EQbw6xn22SA+DsQ9Z4dbxpy9zWLViDYMK7jvRl76H6E1gbDiF16zzbgQ5svVUMKz0jLxGV6R92OX9FE/DT9f+01V6iqFaumeId4ARxXnWDWp2L0/pU9CrS7O8LR6XphGqgoOCfFfq7P8A6Y6Ujzscvm12+qDyBLbize3eV2X5/fu8J9BzzjfJoj2XnZQjiO24SFml/JW8dia71tqTgJzYuP6qDKZchrsmSmeafRBkuMAgn/eAe2D1NHaueRqzeovedPbWPXwOSMELBSuKNn38XkED9PoPcVZ3Ny/TWgSdZcE1hTOHnVEhVaiFwU/jN2k48AzxUG5PiF+j3lpSsGDMdoWBSIb5UVKkmdPkDVswQi3gAaWm8Th4WRh9HjnOP1YG94X5HE13M1RmWPSunsqnAckG0SsjN7wHQgKgKQcEcv7ibj6sADBXqLjbovFI5YHV1DNCmxSnMomFskn7f2YbJgz96wkvODP+WjBggGTMsNj36hk6imKEzeUX3Ww7eJMr++wR8XD7wpzcE1KeiQq/opIsz/Au/IL2sf+w5le8mb923gwRLWzQk4yBpEMVDdsToI8zsncmrz7MaiEZ6/IStTn3q9+1CAFjMh7yTy9s7iUehX6MmMl7PBXNf2ik27wkWUbyjEtZkDaIOvb0s24vU1Ws63AuRAmTSWK+9HewYyWcVQ53Zs/J24bSj7/+LTqJVDkNS+urxawb6NETt39HwQIvqkfAlrqSQpZ/7Stv0u9iIllTV+bOCw9diya+kT/3tQqGhJ90Ogd1MNL/G+ai7ZGLr+kBFSCVOnOQ+EdFBQl4cnt/tNzcY7corLgbQNggA+Vt7ZKHdXW9s1cypWHEgzLUl/+y/eObm3JaG5DnSCKNatnaYU0Vw7tDwm+Rq2Odb3YXnVqpgxygRfXP7ePSPmQHtIBt6EvwmH4LrTeNffTj6UXGwd4kxOT+E+Xp3BZlRXkvsl9Yu7zprf/TNrymU775HiaLrPLk/HVYIqh0u8+01CgG8YFnKNPLTRw6qOb/OjBc+3RfXHD0/h4HqyVZOhYejj34ZZHc4VAh4SQkjeGG1cMbBIRx6X565N/mHIfV315Dui/1D0LRiHTqEzi6qq9vFuKd973lCc+8YjTKh1Uq2MCh+YL6dUcgZ8ZnoldV8XhuxYt6EYZEllvso7eJL8unXq24eSkpIkh9+utvy2uTkHph7evrs2qxkbP9k/F6hbdf1mE+Cpnl8+2MgTY4UsVCyP8C7jG9ajd1GLB5OYOtthWG2ECkLBrsGLU4RU1cYbFS7SdVkQf7nprBsLEaDkBvpxIXYZk4SRZRtk/XggxrGRpTJrXVl6DDBkcjW1QHEQbOR6NifjIsGdaEGNpVTQN2kVHgZKDNYdBToCI0dUWhatYYAq/yfpLbXUIbLjETym4wJYoWfEsNtvPvciJEvQMjBfZ3naVC1TUlSHNWDlDcb9mJw7Ucoqy3dPDqN55P+pX5EdPcvYf13wkId/hlttXOp3Xu4xcmCgvxpct6xNQ6yPC6h+b55LT8op5RDMHRcc+8LHxaWeTTg9Vn/P+YNStp2aPrM+IGbKDnucjo3iD4K7dumcSIyK4E5iuzszg5x4hFixGOySKds73hJO4Jb47rTgaOwDePJgFB+LuARAxf3wksrNb7PVjQJ+t8t0rr9Tx2acI4esrSSiTdbEnClFcnIuGBadmbpwL7vbqG3gqmHbHzZSNSQ=",iter:600000};
+const b64=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+const idb=(mode,fn)=>new Promise((res,rej)=>{const o=indexedDB.open("aside-artifacts",1);o.onupgradeneeded=()=>o.result.createObjectStore("k");o.onerror=()=>rej(o.error);o.onsuccess=()=>{const t=o.result.transaction("k",mode);const q=fn(t.objectStore("k"));t.oncomplete=()=>res(q&&q.result);t.onerror=()=>rej(t.error);};});
+const derive=async pw=>crypto.subtle.deriveKey({name:"PBKDF2",salt:b64(D.salt),iterations:D.iter,hash:"SHA-256"},await crypto.subtle.importKey("raw",new TextEncoder().encode(pw),"PBKDF2",false,["deriveKey"]),{name:"AES-GCM",length:256},false,["decrypt"]);
+const dec=async k=>new TextDecoder().decode(await crypto.subtle.decrypt({name:"AES-GCM",iv:b64(D.iv)},k,b64(D.ct)));
+const show=h=>{document.open();document.write(h);document.close();};
+(async()=>{try{const k=await idb("readonly",s=>s.get(D.salt));if(k){show(await dec(k));return;}}catch(_){}
+const f=document.getElementById("f");f.hidden=false;
+f.onsubmit=async ev=>{ev.preventDefault();const e=document.getElementById("e"),b=document.getElementById("b");b.disabled=true;e.textContent="";b.textContent="確認中…";
+try{const k=await derive(document.getElementById("p").value);const h=await dec(k);
+if(document.getElementById("r").checked){try{await idb("readwrite",s=>s.put(k,D.salt));}catch(_){}}show(h);}
+catch(_){e.textContent="パスワードが違います";b.disabled=false;b.textContent="開く";}};})();
+</script></body></html>
